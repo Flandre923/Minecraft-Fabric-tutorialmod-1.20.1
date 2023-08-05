@@ -1,0 +1,49 @@
+{
+  // More info on template pools can be found here: https://minecraft.gamepedia.com/Custom_world_generation#JSON_format_8
+  // Yes, worldgen json files can have comments. Minecraft does "lenient" parsing of these json files.
+
+  // This is the name of the template pool itself. I tend to just put the file path and file name here with modid.
+  // 名字
+  "name": "tutorialmod:example_house/start_pool",
+
+  // The template pool to refer to if the entries in 'elements' fails to generate.
+  // 失败时候生成的方块
+  "fallback": "minecraft:empty",
+
+  // Here you can list as many nbt files or placed features to spawn.
+  // Do note that placed features needs a special element entry stuff.
+  // 放置结构需要特殊的条目
+  "elements": [
+    {
+
+      // How likely out of all the element for this one to be chosen.
+      // 从该条目中的选择的权重
+      "weight": 1,
+      "element": {
+
+        // The Identifier of the nbt file itself of the structure piece.
+        // Note, this will automatically check into the 'structures' folder for the nbt file.
+        // The final path would look like 'resources/data/tutorialmod/structures/run_down_house_left_side.nbt'
+        // The Jigsaw block in the structure will point to side_pool.json to spawn the other half of the house.
+        // 你的结构nbt的名称
+        "location": "tutorialmod:example_house",
+
+        // Processor JSON files can be used to randomize or replace blocks dynamically. Here, we don't do any of that.
+        // 动态随机化替换方块，这里不做处理
+        "processors": "minecraft:empty",
+
+        // If set to 'terrain_matching', the house would be deformed to fit the change in land.
+        // That's best for roads so lets stay 'rigid' for now.
+        // 房屋适应土地的变化,这里选择的rigid
+        "projection": "rigid",
+
+        // The kind of element we are spawning. This one is most likely what you want.
+        // There's 'minecraft:legacy_single_pool_element' but that swaps the behavior of
+        // Air and Structure Void in your piece as well as change the attachment mechanism.
+        // It's only for old Vanilla Jigsaw Structures so don't use it. Stick with non-legacy.
+        // 使用这个就可以了
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
