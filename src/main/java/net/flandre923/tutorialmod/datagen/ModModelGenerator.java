@@ -48,6 +48,7 @@ public class ModModelGenerator extends FabricModelProvider {
         this.registerLamp(blockStateModelGenerator);
         blockStateModelGenerator.registerCrop(ModBlocks.EGGPLANT_CROP, EggplantCropBlock.AGE,0,1,2,3,4,5,6);
         blockStateModelGenerator.registerParentedItemModel(ModItems.CHOMPER_SPAWN_EGG,ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+        blockStateModelGenerator.registerParentedItemModel(ModItems.EXAMPLE_ENTITY_EGG,ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
 
     }
 

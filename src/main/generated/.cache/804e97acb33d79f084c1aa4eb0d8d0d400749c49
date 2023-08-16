@@ -1,9 +1,10 @@
-// 1.20.1	2023-07-30T12:58:34.25963	Tutorial Mod/tutorialmod
+// 1.20.1	2023-08-15T08:57:29.7106584	Tutorial Mod/tutorialmod
 8ef59c1e883d7685dce3c95d98a005d6ad076e99 data\tutorialmod\worldgen\placed_feature\ruby_ore_placed.json
-4dd4de0060533861b58e660ecf0c2fdd83ed38d2 data\tutorialmod\worldgen\configured_feature\red_maple.json
 ba567460e78dd6c0cc9235b9d90b049027ed209a data\tutorialmod\worldgen\configured_feature\flower_buttercups.json
+4dd4de0060533861b58e660ecf0c2fdd83ed38d2 data\tutorialmod\worldgen\configured_feature\red_maple.json
 de82b8d0d9df13350c9f375df3da49bd221456a9 data\tutorialmod\worldgen\configured_feature\ruby_geode.json
 543e4239fdd38555998deb0c94de7a4703f9d096 data\tutorialmod\worldgen\placed_feature\red_maple_place.json
 c5f6f27ba0946aff3450d8ddf9e52cb5dfaa5cec data\tutorialmod\worldgen\configured_feature\ruby_ore.json
+7450d02a2c3358c79bbbbed1bf664971258ba988 data\tutorialmod\dimension_type\my_world.json
 5239e9deb7cab6657cce88b31781ce7c6b1ea667 data\tutorialmod\worldgen\placed_feature\ruby_geode_place.json
 2a95b7e3da5f63849d3f26ec2710474f6b02cc28 data\tutorialmod\worldgen\placed_feature\buttercups_placed.json

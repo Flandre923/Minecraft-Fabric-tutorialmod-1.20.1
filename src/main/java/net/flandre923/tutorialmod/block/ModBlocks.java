@@ -3,10 +3,7 @@ package net.flandre923.tutorialmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.flandre923.tutorialmod.TutorialMod;
-import net.flandre923.tutorialmod.block.custom.EggplantCropBlock;
-import net.flandre923.tutorialmod.block.custom.GemInfusingStationBlock;
-import net.flandre923.tutorialmod.block.custom.SimpleBlock;
-import net.flandre923.tutorialmod.block.custom.TanzaniteLampBlock;
+import net.flandre923.tutorialmod.block.custom.*;
 import net.flandre923.tutorialmod.world.tree.MapleSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
@@ -49,6 +46,10 @@ public class ModBlocks {
 
     public static final Block GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
             new GemInfusingStationBlock(FabricBlockSettings.create().instrument(Instrument.IRON_XYLOPHONE)
+                    .strength(4f).requiresTool().nonOpaque()));
+
+    public static final Block EXAMPLE_ANIAMTION_BLOCK =  Registry.register(Registries.BLOCK,new Identifier(TutorialMod.MOD_ID,"example_animation_block"),
+            new ExampleAnimationBlock(FabricBlockSettings.create().instrument(Instrument.IRON_XYLOPHONE)
                     .strength(4f).requiresTool().nonOpaque()));
 
     //

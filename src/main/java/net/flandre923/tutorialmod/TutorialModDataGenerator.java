@@ -3,6 +3,8 @@ package net.flandre923.tutorialmod;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.flandre923.tutorialmod.datagen.*;
+import net.flandre923.tutorialmod.world.dimension.ModDimensionTypeRegistrar;
+import net.flandre923.tutorialmod.world.dimension.ModDimensionTypes;
 import net.flandre923.tutorialmod.world.feature.ModConfiguredFeatures;
 import net.flandre923.tutorialmod.world.feature.ModPlacedFeatures;
 import net.minecraft.registry.RegistryBuilder;
@@ -28,5 +30,6 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint  {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensionTypeRegistrar::bootstrap);
 	}
 }

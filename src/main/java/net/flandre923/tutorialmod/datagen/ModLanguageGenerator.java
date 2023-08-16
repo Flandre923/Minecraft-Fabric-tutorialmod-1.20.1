@@ -45,7 +45,7 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.RED_MAPLE_LEAVES,"Red Maple Leaves");
         translationBuilder.add(ModBlocks.RED_MAPLE_SAPLING,"Red Maple Sapling");
         translationBuilder.add(ModBlocks.BUTTERCUPS,"Buttercups");
-
+        translationBuilder.add(ModItems.EXAMPLE_ENTITY_EGG,"Example Entity Egg");
 
         translationBuilder.add("block.tutorialmod:soap_water","Soap Water"); // %d  --> int  %f -->float/double
         translationBuilder.add("tutorialmod.tooltip.liquid.amount.with.capacity","%s / %s mB");

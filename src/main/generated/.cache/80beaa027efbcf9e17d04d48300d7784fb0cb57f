@@ -1,8 +1,8 @@
-// 1.20.1	2023-07-30T12:58:34.2616302	Tutorial Mod/Tags for minecraft:block
+// 1.20.1	2023-08-15T08:57:29.716238	Tutorial Mod/Tags for minecraft:block
 58db322007f3f9ff8b97d63e468d450a2823d930 data\minecraft\tags\blocks\needs_stone_tool.json
 cba96fa1861dbcef957718ac1b43ef95f26835fe data\fabric\tags\blocks\needs_tool_level_5.json
 87fb3859b18618765ccd5fdc3f2da1a569e3ff5f data\minecraft\tags\blocks\logs.json
 e2286c628c5df58f5d70daf3eb48393e84904404 data\minecraft\tags\blocks\needs_iron_tool.json
-e8d9e16a88ca6a6df37733dcb6405d2163678758 data\minecraft\tags\blocks\needs_diamond_tool.json
 73c07b084712b06dbb0b224fdf6348000e5741df data\fabric\tags\blocks\needs_tool_level_4.json
+e8d9e16a88ca6a6df37733dcb6405d2163678758 data\minecraft\tags\blocks\needs_diamond_tool.json
 9602348f27b5c6abc7ea0d380b0892aa3448a1ea data\minecraft\tags\blocks\mineable\pickaxe.json

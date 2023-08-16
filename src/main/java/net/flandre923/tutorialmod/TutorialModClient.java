@@ -9,10 +9,12 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.flandre923.tutorialmod.block.ModBlocks;
 import net.flandre923.tutorialmod.block.entity.ModBlockEntities;
+import net.flandre923.tutorialmod.block.entity.client.ExampleAnimationBlockRenderer;
 import net.flandre923.tutorialmod.block.entity.client.GemInfusingStationBlockEntityRenderer;
 import net.flandre923.tutorialmod.client.ThirstHudOverlay;
 import net.flandre923.tutorialmod.entity.ModEntities;
 import net.flandre923.tutorialmod.entity.client.ChomperRenderer;
+import net.flandre923.tutorialmod.entity.client.ExampleEntityRenderer;
 import net.flandre923.tutorialmod.entity.custom.ChomperEntity;
 import net.flandre923.tutorialmod.event.KeyInputHandler;
 import net.flandre923.tutorialmod.fluid.ModFluids;
@@ -62,6 +64,10 @@ public class TutorialModClient implements ClientModInitializer {
                 GemInfusingStationBlockEntityRenderer::new);
 
         EntityRendererRegistry.register(ModEntities.CHOMPER, ChomperRenderer::new);
+        EntityRendererRegistry.register(ModEntities.EXAMPLE_ENTITY, ExampleEntityRenderer::new);
+
+
+        BlockEntityRendererFactories.register(ModBlockEntities.EXAMPLE_ANIMATION_BLOCK_ENTITY, ExampleAnimationBlockRenderer::new);
 
     }
 }

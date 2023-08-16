@@ -27,6 +27,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GEM_INFUSING_STATION);
                         entries.add(ModItems.CHOMPER_SPAWN_EGG);
                         entries.add(ModItems.TANZANITE_PICKAXE);
+                        entries.add(ModItems.EXAMPLE_ANIMATION_ITEM);
+                        entries.add(ModItems.EXAMPLE_ANIMATION_BLOCK);
 
 
                         entries.add(ModBlocks.RUBY_BLOCK);

@@ -11,6 +11,7 @@ import net.flandre923.tutorialmod.block.ModFlammableBlockRegistry;
 import net.flandre923.tutorialmod.block.entity.ModBlockEntities;
 import net.flandre923.tutorialmod.entity.ModEntities;
 import net.flandre923.tutorialmod.entity.custom.ChomperEntity;
+import net.flandre923.tutorialmod.entity.custom.ExampleEntity;
 import net.flandre923.tutorialmod.event.AttackEntityHandler;
 import net.flandre923.tutorialmod.event.PlayerTickHandler;
 import net.flandre923.tutorialmod.fluid.ModFluids;
@@ -23,8 +24,12 @@ import net.flandre923.tutorialmod.screen.ModScreenHandlers;
 import net.flandre923.tutorialmod.util.ModLootTableModifies;
 import net.flandre923.tutorialmod.villager.ModVillagers;
 import net.flandre923.tutorialmod.villager.VillageAddition;
+import net.flandre923.tutorialmod.world.dimension.ModDimensionTypes;
 import net.flandre923.tutorialmod.world.gen.ModOreGeneration;
 import net.flandre923.tutorialmod.world.gen.ModWorldGeneration;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import org.apache.logging.log4j.core.jmx.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -68,10 +73,18 @@ public class TutorialMod implements ModInitializer {
 
 		GeckoLib.initialize();
 		FabricDefaultAttributeRegistry.register(ModEntities.CHOMPER, ChomperEntity.setAttributes());
-
+		FabricDefaultAttributeRegistry.register(ModEntities.EXAMPLE_ENTITY, ExampleEntity.setAttributes());
 		AttackEntityCallback.EVENT.register(new AttackEntityHandler());
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 
+
+		//
+		CustomPortalBuilder.beginPortal()
+						.frameBlock(Blocks.GOLD_BLOCK)
+								.lightWithItem(Items.ENDER_EYE)
+										.destDimID(ModDimensionTypes.MY_WORLD_ID)
+												.tintColor(234,183,8)
+														.registerPortal();
 
 		ModFluids.register();
 	}

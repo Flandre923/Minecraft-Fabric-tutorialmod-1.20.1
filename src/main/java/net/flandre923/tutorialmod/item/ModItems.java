@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.flandre923.tutorialmod.TutorialMod;
 import net.flandre923.tutorialmod.block.ModBlocks;
 import net.flandre923.tutorialmod.entity.ModEntities;
+import net.flandre923.tutorialmod.item.custom.ExampleAnimationBlockItem;
+import net.flandre923.tutorialmod.item.custom.ExampleAnimationItem;
 import net.flandre923.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -31,9 +33,20 @@ public class ModItems {
     public static final Item CHOMPER_SPAWN_EGG = registerItem("chomper_spawn_egg",
             new SpawnEggItem(ModEntities.CHOMPER,0x22b341,0x19732e,
                     new FabricItemSettings()));
+
     public static final Item TANZANITE_PICKAXE = registerItem("tanzanite_pickaxe",
             new PickaxeItem(ModToolMaterial.TANZANITE,4,2f,
                     new FabricItemSettings()));
+
+    public static final Item EXAMPLE_ENTITY_EGG = registerItem("example_entity_egg",
+            new SpawnEggItem(ModEntities.EXAMPLE_ENTITY,0x222222,0x555555,
+                    new FabricItemSettings()));
+
+    public static final Item EXAMPLE_ANIMATION_ITEM = registerItem("example_animation_item",
+            new ExampleAnimationItem(new FabricItemSettings()));
+
+    public static final Item EXAMPLE_ANIMATION_BLOCK = registerItem("example_animation_block",
+            new ExampleAnimationBlockItem(ModBlocks.EXAMPLE_ANIAMTION_BLOCK,new FabricItemSettings()));
 
     // 处理全部的item 和 搜索的item
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries){
