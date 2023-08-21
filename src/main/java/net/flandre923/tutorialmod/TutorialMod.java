@@ -30,6 +30,7 @@ import net.flandre923.tutorialmod.world.gen.ModWorldGeneration;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
+import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.core.jmx.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,7 +83,7 @@ public class TutorialMod implements ModInitializer {
 		CustomPortalBuilder.beginPortal()
 						.frameBlock(Blocks.GOLD_BLOCK)
 								.lightWithItem(Items.ENDER_EYE)
-										.destDimID(ModDimensionTypes.MY_WORLD_ID)
+										.destDimID(new Identifier(TutorialMod.MOD_ID,"mining"))
 												.tintColor(234,183,8)
 														.registerPortal();
 
