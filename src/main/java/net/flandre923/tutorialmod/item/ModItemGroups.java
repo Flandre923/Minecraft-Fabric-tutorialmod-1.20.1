@@ -46,6 +46,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_RED_MAPLE_LOG);
                         entries.add(ModBlocks.STRIPPED_RED_MAPLE_WOOD);
+                        entries.add(ModBlocks.TERRA_CONDENSATION);
                     }).build());
 
     public static void registerItemGroups(){

@@ -14,6 +14,8 @@ import team.reborn.energy.api.EnergyStorage;
 public class ModBlockEntities {
 
     public static BlockEntityType<GemInfusingBlockEntity> GEM_INFUSING_STATION;
+    public static BlockEntityType<TerraCondensationEntity> TERRA_CONDENSATION;
+
     public static BlockEntityType<ExampleAnimationBlockEntity> EXAMPLE_ANIMATION_BLOCK_ENTITY;
 
     public static void registerBlockEntities(){
@@ -21,6 +23,13 @@ public class ModBlockEntities {
                 new Identifier(TutorialMod.MOD_ID,"gem_infusing_station"),
                 FabricBlockEntityTypeBuilder.create(GemInfusingBlockEntity::new,
                         ModBlocks.GEM_INFUSING_STATION).build(null));
+
+        TERRA_CONDENSATION = Registry.register(Registries.BLOCK_ENTITY_TYPE,
+                new Identifier(TutorialMod.MOD_ID,"terra_condensation"),
+                FabricBlockEntityTypeBuilder.create(TerraCondensationEntity::new,
+                        ModBlocks.TERRA_CONDENSATION).build(null));
+
+
 
         EnergyStorage.SIDED.registerForBlockEntities((blockEntity, context) -> ((GemInfusingBlockEntity)blockEntity).energyStorage,GEM_INFUSING_STATION);
         FluidStorage.SIDED.registerForBlockEntities((blockEntity, context) -> ((GemInfusingBlockEntity)blockEntity).fluidStorage,GEM_INFUSING_STATION);

@@ -48,6 +48,9 @@ public class ModBlocks {
             new GemInfusingStationBlock(FabricBlockSettings.create().instrument(Instrument.IRON_XYLOPHONE)
                     .strength(4f).requiresTool().nonOpaque()));
 
+    public static final Block TERRA_CONDENSATION = registerBlock("terra_condensation",
+            new TerraCondensationCube(FabricBlockSettings.create().instrument(Instrument.IRON_XYLOPHONE)
+                    .strength(4f).requiresTool().nonOpaque()));
     public static final Block EXAMPLE_ANIAMTION_BLOCK =  Registry.register(Registries.BLOCK,new Identifier(TutorialMod.MOD_ID,"example_animation_block"),
             new ExampleAnimationBlock(FabricBlockSettings.create().instrument(Instrument.IRON_XYLOPHONE)
                     .strength(4f).requiresTool().nonOpaque()));
